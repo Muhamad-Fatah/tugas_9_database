@@ -1,0 +1,29 @@
+1.Jalankan MySQL server di xampp
+2.Masuk kedalam folder bin mysql : cd c:/xampp/mysql/bin
+3.Jalankan client server : MYSQL -u root
+
+4.Create database tugas;
+5.use tugas;
+6.CREATE TABLE mahasiswa_niomic
+    -> (nim smallint (8) primary key,
+    -> nama varchar (50),
+    -> asal varchar(50),
+    -> jurusan varchar(50),
+    -> nilai_uan decimal(3,2));
+7.INSERT INTO mahasiswa_niomic VALUES
+    ->     (17020217,"James Situmarong","Medan","Kedokteran Gigi",341.10),
+    ->     (17080225,"Husli Khairan","Jakarta","Akuntansi",288.55),
+    ->     (17080305,"Rina Kumala Sari","Jakarta","Akuntansi",337.99),
+    ->     (17090113,"Riana Putria","Padang","Kimia",339.20),
+    ->     (17090222,"Sari Citra Lestari", "Jakarta","Manajemen",310.60),
+    ->     (17090308,"Christine Wijaya","Medan","Manajemen",321.74),
+    ->     (17140119,"Sandri Fatmala","Bandung","Ilmu Komputer",322.91),
+    ->     (17140120,"Bobby Permana","Medan","Ilmu Komputer",280.82),
+    ->     (17140133,"Ikhsan Prayoga","Jakarta","Ilmu Komputer",300.16),
+    ->     (17140143,"Rudi Permana","Bandung","Ilmu Komputer",290.44);
+8.UPDATE mahasiswa_niomic SET nama="Irfan Arifin", asal="Lampung" 
+    -> WHERE nim=17020217;
+9.UPDATE IGNORED mahasiswa_niomic SET nilai_uan=5000
+    -> WHERE nama="Husli Khairan";
+10.REPLACE INTO mahasiswa_niomic VALUES
+    -> (17090141,"Lidya Fitriana","Surabaya","Kimia",290.54);
